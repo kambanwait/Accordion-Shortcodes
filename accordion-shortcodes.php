@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Accordion Shortcodes
  * Description: Adds a few shortcodes to allow for accordion dropdowns.
- * Version: 1.2.3
- * Author: Phil Buchanan
- * Author URI: http://philbuchanan.com
+ * Version: 1.2.4
+ * Author: Phil Buchanan Foked by Kam Banwait
+ * Author URI: http://philbuchanan.com / http://www.scriptedpixels.co.uk
  */
 
 # Make sure to not redeclare the class
@@ -97,7 +97,7 @@ class Accordion_Shortcodes {
 			'tag' => 'h3'
 		), $atts, 'accordion-item'));
 		
-		return sprintf('<%3$s class="accordion-title">%1$s</%3$s><div class="accordion-content">%2$s<span class="close">close</span></div>',
+		return sprintf('<%3$s class="accordion-title">%1$s</%3$s><div class="accordion-content">%2$s<span class="close">X</span></div>',
 			$title ? $title : '<span style="color:red;">' . __('Please enter a title attribute: [accordion-item title="Item title"]', 'accordion_shortcodes') . '</span>',
 			do_shortcode($content),
 			$tag
