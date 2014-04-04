@@ -29,16 +29,27 @@
 		firstPanel.slideDown(duration);
 	}
 	
+	function closeAll() {
+		allPanels.slideUp(duration);
+		allTitles.removeClass('open');
+	};
+
 	// Add event listener
+	closeMe.click(function(){
+		// Close all accordion items
+		if (settings.autoClose) {
+			closeAll();
+		}
+	});
+
 	allTitles.click(function() {
 	
 		// Only open the item if item isn't already open
 		if (!$(this).hasClass('open')) {
-		
+
 			// Close all accordion items
 			if (settings.autoClose) {
-				allPanels.slideUp(duration);
-				allTitles.removeClass('open');
+				closeAll();
 			}
 			
 			// Open clicked item

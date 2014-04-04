@@ -97,7 +97,7 @@ class Accordion_Shortcodes {
 			'tag' => 'h3'
 		), $atts, 'accordion-item'));
 		
-		return sprintf('<%3$s class="accordion-title">%1$s</%3$s><div class="accordion-content">%2$s</div>',
+		return sprintf('<%3$s class="accordion-title">%1$s</%3$s><div class="accordion-content">%2$s<span class="close">X</span></div>',
 			$title ? $title : '<span style="color:red;">' . __('Please enter a title attribute: [accordion-item title="Item title"]', 'accordion_shortcodes') . '</span>',
 			do_shortcode($content),
 			$tag
