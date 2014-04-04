@@ -46,7 +46,7 @@ class Accordion_Shortcodes {
 	# Registers the minified accordion JavaScript file
 	static function register_script() {
 	
-		$min = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? '' : '.min';
+		$min = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? '' : '';
 		wp_register_script('accordion-shortcodes-script', plugins_url('accordion' . $min . '.js', __FILE__), array('jquery'), '1.2.3', true);
 	
 	}
@@ -97,7 +97,7 @@ class Accordion_Shortcodes {
 			'tag' => 'h3'
 		), $atts, 'accordion-item'));
 		
-		return sprintf('<%3$s class="accordion-title">%1$s</%3$s><div class="accordion-content">%2$s<span class="close">X</span></div>',
+		return sprintf('<%3$s class="accordion-title">%1$s</%3$s><div class="accordion-content">%2$s<span class="close">close</span></div>',
 			$title ? $title : '<span style="color:red;">' . __('Please enter a title attribute: [accordion-item title="Item title"]', 'accordion_shortcodes') . '</span>',
 			do_shortcode($content),
 			$tag

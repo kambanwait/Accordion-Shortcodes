@@ -2,6 +2,7 @@
 	'use strict';
 	
 	var allTitles  = $('.accordion-title'),
+		closeMe    = $('span.close'),
 		allPanels  = $('.accordion-content').hide(),
 		firstPanel = $('.accordion-content:first-of-type'),
 		duration   = 250,
@@ -29,6 +30,7 @@
 		firstPanel.slideDown(duration);
 	}
 	
+	// Add event listener
 	function closeAll() {
 		allPanels.slideUp(duration);
 		allTitles.removeClass('open');
@@ -46,7 +48,7 @@
 	
 		// Only open the item if item isn't already open
 		if (!$(this).hasClass('open')) {
-
+		
 			// Close all accordion items
 			if (settings.autoClose) {
 				closeAll();
