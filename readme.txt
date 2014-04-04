@@ -125,6 +125,9 @@ You can also set the HTML tag for the titles of each item by added `tag="tagname
 For bug reports or feature requests or if you'd like to contribute to the plugin you can check everything out on [Github](https://github.com/philbuchanan/Accordion-Shortcodes/).
 
 == Changelog ==
+= 1.2.4 =
+* Added a span.close text to the php so users have a way to close an open accordion, on multiple of single accordions. Styling's required
+
 = 1.2.3 =
 * Added the shortcode parameter when calling shortcode_atts()
 
